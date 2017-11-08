@@ -1,0 +1,101 @@
+<!doctype html>
+	<html>
+		<head>
+			<title> Tsz Hin Shop</title>
+			<style>
+				img{width:260px;
+				height:150px}		
+			</head>
+			</style>
+			<script>
+				function purchase(){
+					var Quantity = document.getElementById("Quantity");
+					var total = document.getElementById("total");
+					var subtotal = parseFloat(Quantity.value) *678.90;
+					var results = document.getElementById("results");
+					var tax = parseFloat(Quantity.value) * 59.40375;
+					var totalamt = parseFloat(Quantity.value) * 59.40375+ parseFloat(Quantity.value) *678.90;
+					var build = "";
+					build += "price:$678.90"+"<br>";
+					build += "Quantity: " + parseFloat(Quantity.value) + "<br>";
+					build += "    subtotal: $" + subtotal.toFixed(2) + "<br>";
+					build += "     Tax: $" + tax.toFixed(2) + "<br>";
+					build += "   Total: $" + totalamt.toFixed(2) + "<br>";
+					total.innerHTML = build;
+				}
+				function confirm(){
+					var Quantity = document.getElementById("Quantity");
+					var total = document.getElementById("total");
+					var subtotal = parseFloat(Quantity.value) *678.90;
+					var results = document.getElementById("results");
+					var tax = parseFloat(Quantity.value) * 59.40375;
+					var totalamt = parseFloat(Quantity.value) * 59.40375+ parseFloat(Quantity.value) *678.90;
+					var Companygain= parseFloat(Quantity.value) * 59.40375+ parseFloat(Quantity.value) *678.90-parseFloat(Quantity.value)*455;
+					alert("you have successfully purchase this product");
+					alert("you paid:$"+totalamt.toFixed(2));
+					alert("the company gained $"+Companygain.toFixed(2));
+					alert("Thanks for shopping")
+				}
+			</script>
+		
+		
+		<body>
+			<div>
+				<h1>computer</h1>
+				<img src= "product.jpg"></img><br>
+				<span>$567.89</span>
+				<p>cheap and good! brabrabra...</p>
+				Quantity:<input type="text" id="Quantity2">
+			</div>
+			<button onclick="purchase2()" >Check the price</button>
+			<button onclick="confirm2()" >Buy it!</button>
+			<div id="total2"></div>
+		</body>
+		
+		
+		<script>
+				function purchase2(){
+					var Quantity2 = document.getElementById("Quantity2");
+					var total = document.getElementById("total2");
+					var subtotal2 = parseFloat(Quantity2.value) *567.89;
+					var results2 = document.getElementById("results2");
+					var tax2 = parseFloat(Quantity2.value) * 49.690375;
+					var totalamt2 = parseFloat(Quantity2.value) * 49.690375+ parseFloat(Quantity2.value) *567.89;
+					var build = "";
+					build += "price:$567.89"+"<br>";
+					build += "Quantity: " + parseFloat(Quantity2.value) + "<br>";
+					build += "    subtotal: " + subtotal2.toFixed(2) + "<br>";
+					build += "     Tax: $" + tax2.toFixed(2) + "<br>";
+					build += "   Total: $" + totalamt2.toFixed(2) + "<br>";
+					total2.innerHTML = build;
+				}
+					function confirm2(){
+					var Quantity2 = document.getElementById("Quantity2");
+					var total = document.getElementById("total2");
+					var subtotal2 = parseFloat(Quantity2.value) *567.89;
+					var results2 = document.getElementById("results2");
+					var tax2 = parseFloat(Quantity2.value) * 49.40375;
+					var totalamt2 = parseFloat(Quantity2.value) * 49.690375+ parseFloat(Quantity2.value) *567.89;
+					var Companygain2= parseFloat(Quantity2.value) * 49.690375+ parseFloat(Quantity2.value) *567.89-parseFloat(Quantity2.value)*400;
+					alert("you have successfully purchase this product");
+					alert("you paid:$"+totalamt2.toFixed(2));
+					alert("the company gained $"+Companygain2.toFixed(2));
+					alert("Thanks for shopping")
+				}
+			</script>
+		</head>
+		<body>
+			<div>
+				<h1>computer plus(bigger screen)</h1>
+				<img src= "product.jpg"></img><br>
+				<span>$678.90</span>
+				<p>best value around $600-700!brabrabra...</p>
+				Quantity:<input type="text" id="Quantity">
+			</div>
+			<button onclick="purchase()" >Check the price</button>
+			<button onclick="confirm()" >Buy it!</button>
+			<div id="total"></div>
+		</body>
+		
+
+	</html>
